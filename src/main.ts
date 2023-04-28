@@ -28,13 +28,15 @@ import { GenericTableWithTemplateOutletComponent } from './table/generic-table-t
     <h2>1. ng-template </h2>
     <app-ng-template />
     <app-declarative-ng-template />
-    <h2>2. Custom table </h2>
-    <h3>2.1 Product table component </h3>
-    <app-product-table [products]="PRODUCTS" />
+    <h2>2. Custom table </h2>    
+
+    <h3 class="mt-4">2.1 Movie table component </h3>
+    <app-movie-table [movies]="MOVIES" />
     <hr />
 
-    <h3 class="mt-4">2.2 Movie table component </h3>
-    <app-movie-table [movies]="MOVIES" />
+    <h3>2.2 Product table component </h3>
+    <app-product-table [products]="PRODUCTS" />
+    <hr />
   `,
 })
 export class App {
