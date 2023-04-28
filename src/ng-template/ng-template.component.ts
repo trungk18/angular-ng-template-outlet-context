@@ -45,8 +45,8 @@ import { NgIf, NgTemplateOutlet } from '@angular/common';
     <div><ng-container *ngTemplateOutlet="fra; context: { name: 'Trung' }"></ng-container></div>
 
     <ng-template #greet><span>Hello</span></ng-template>
-    <ng-template #eng let-name><span>Hello {{name}}!</span></ng-template>
-    <ng-template #fra let-name="name"><span>Bonjour {{name}}!</span></ng-template>
+    <ng-template #eng let-hihi><span>Hello {{hihi}}!</span></ng-template>
+    <ng-template #fra let-haha="name"><span>Bonjour {{haha}}!</span></ng-template>
   `,
   standalone: true,
 })

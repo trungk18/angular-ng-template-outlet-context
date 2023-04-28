@@ -32,27 +32,9 @@ import { GenericTableWithTemplateOutletComponent } from './table/generic-table-t
     <h3>2.1 Product table component </h3>
     <app-product-table [products]="PRODUCTS" />
     <hr />
-    <app-generic-table [data]="PRODUCTS" [columns]="productColumns" />
 
     <h3 class="mt-4">2.2 Movie table component </h3>
     <app-movie-table [movies]="MOVIES" />
-    <app-generic-table [data]="MOVIES" [columns]="movieColumns" />
-
-    <app-generic-table-outlet [data]="MOVIES">
-      <ng-template #header>
-        <th>Product ID</th>
-        <th>Title</th>
-        <th>Rating</th>
-        <th>Year</th>
-      </ng-template>
-
-      <ng-template #row let-row="row">
-        <td>{{ row.id }}</td>
-        <td>{{ row.title }}</td>
-        <td>{{ row.rating }}</td>
-        <td>{{ row.year }}</td>
-      </ng-template>
-    </app-generic-table-outlet>
   `,
 })
 export class App {

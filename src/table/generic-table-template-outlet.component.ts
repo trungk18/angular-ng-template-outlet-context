@@ -31,6 +31,6 @@ export interface Column {
 })
 export class GenericTableWithTemplateOutletComponent {
   @Input() data: any[];
-  @ContentChild('row') row: TemplateRef<any>;
   @ContentChild('header') header: TemplateRef<any>;
+  @ContentChild('row') row: TemplateRef<any>;
 }
