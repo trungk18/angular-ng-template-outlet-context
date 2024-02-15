@@ -32,6 +32,24 @@ import { GenericTableWithTemplateOutletComponent } from './table/generic-table-t
 
     <h3 class="mt-4">2.1 Movie table component </h3>
     <app-movie-table [movies]="MOVIES" />
+    <!-- 02. Generic table -->
+    <!-- <app-generic-table [data]="MOVIES" [columns]="movieColumns" /> -->
+    
+    <!-- 05. Generic table outlet -->
+    <!-- <app-generic-table-outlet [data]="MOVIES">
+      <ng-template #header>
+        <th>Movie ID</th>
+        <th>Title</th>
+        <th>Rating</th>
+        <th>Year</th>
+      </ng-template>
+      <ng-template #row let-row="row">
+        <td>{{ row.id }}</td>
+        <td>{{ row.title }}</td>
+        <td>{{ row.rating }}</td>
+        <td>{{ row.year }}</td>
+      </ng-template>
+    </app-generic-table-outlet> -->
     <hr />
 
     <h3>2.2 Product table component </h3>
@@ -40,21 +58,21 @@ import { GenericTableWithTemplateOutletComponent } from './table/generic-table-t
   `,
 })
 export class App {
-  PRODUCTS = PRODUCTS;
   MOVIES = MOVIES;
-
-  productColumns: Column[] = [
-    { field: 'id', header: 'Product ID' },
-    { field: 'name', header: 'Name' },
-    { field: 'madeIn', header: 'From ' },
-    { field: 'price', header: 'Price' },
-  ];
+  PRODUCTS = PRODUCTS;
 
   movieColumns: Column[] = [
     { field: 'id', header: 'Movie ID' },
     { field: 'title', header: 'Title' },
     { field: 'rating', header: 'Rating ' },
     { field: 'year', header: 'Year' },
+  ];
+
+  productColumns: Column[] = [
+    { field: 'id', header: 'Product ID' },
+    { field: 'name', header: 'Name' },
+    { field: 'madeIn', header: 'From ' },
+    { field: 'price', header: 'Price' },
   ];
 }
 
